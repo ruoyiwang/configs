@@ -1,0 +1,36 @@
+[color]
+ui = auto
+[alias]
+st = status
+ci = commit
+co = checkout
+llog = log --oneline @{upstream}..HEAD
+llp = log -p @{upstream}..HEAD
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+br = branch
+[amazon]
+autofetch-interval = 10 minutes ago
+git-config-basic = true
+append-cr-url = true
+pull-request-by-default = true
+[push]
+default = simple
+[rerere]
+enabled = true
+[core]
+excludesfile = ~/.gitignore_global
+pager = less -FMRiX
+[rebase]
+autosquash = true
+[sendemail]
+smtpserver = smtp.amazon.com
+from = ruoywang@amazon.com
+[branch]
+[receive]
+[branch "mainline"]
+; mergeoptions = --no-ff
+[apply]
+[user]
+	name = ruoyiwang
+	email = wang.ruoyi.uw@gmail.com
